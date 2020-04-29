@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: mean-eks-demo #cluster name
+  region: us-east-2c #desired region
+
+nodeGroups:
+  - name: ng-1 #cluster node group nam
+    instanceType: t2.micro #desired instance type
+    desiredCapacity: 1 
+    ssh:
+      allow: false # if true - will use ~/.ssh/id_rsa.pub as the default ssh key
+
